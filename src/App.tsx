@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './pages/Home';
-// import About from './pages/About'
 import NavBar from './components/NavBar';
 import Music from "./pages/Music";
 import Mission from "./pages/Mission";
@@ -21,7 +20,6 @@ function App() {
             <Route path="mission" element={<Mission/>} />
             <Route path="music" element={<Music/>} />
             <Route path="travel" element={<Travel/>} />
-            {/* <Route path="music" element={<Music/>} /> */}
           </Route>
         </Routes>
       </BrowserRouter>

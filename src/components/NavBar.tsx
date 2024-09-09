@@ -85,7 +85,7 @@ function NavBar() {
             <div className="flex flex-col gap-3 pl-3 justify-center place-items-start pb-3">
               <a href={resume} target='_blank' rel="noopener noreferrer">Resume</a>
               <button className="text-gray-500 cursor-not-allowed" disabled={true}>Mission</button>
-              <a href='/music'>Music</a>
+              <Link onClick={() => setShowMenu(false)} to="/music">Music</Link>
               <button className="text-gray-500 cursor-not-allowed" disabled={true}>Travel</button>
             </div> : 
             <div/>
