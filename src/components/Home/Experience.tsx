@@ -1,4 +1,3 @@
-import Beam from "./tracing-beam/Beam"
 import casa from '../../assets/casasystems_logo.png'
 import broad from '../../assets/broad_logo.png'
 import { useRef } from "react";
@@ -14,7 +13,6 @@ function Experience(){
         </div>
         <CasaSystems/>
         <BroadInstitute/>
-        {/* <Beam componentsList={[<CasaSystems/>, <BroadInstitute/>]}/> */}
       </div>
     </>
   )
