@@ -1,6 +1,6 @@
 
 import AudioPlayer from 'react-h5-audio-player';
-import 'react-h5-audio-player/lib/styles.css';
+import './react-h5-audio-player.css';
 import spooky from '../assets/music/how spooky can one get.mp3'
 import launch from '../assets/music/launch.mp3'
 import thedeparted from '../assets/music/the prayer.mp3'
