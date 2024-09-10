@@ -86,8 +86,6 @@ function Skill(props: {image: string, description: string, index: number}){
   text-center h-full w-full justify-center 
   place-items-center flex flex-col gap-3`
   
-  const gcp = '/src/assets/gcp_logo.png'
-  const docker = '/src/assets/docker_logo.png'
   let imageSize = 'w-16 h-16'
   if(props.image == gcp || props.image == docker){
     imageSize = 'w-16 h-12 m-2'
