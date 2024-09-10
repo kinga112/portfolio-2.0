@@ -67,7 +67,7 @@ function NavBar() {
       </div>
       {/* small screens */}
       <div className='absolute top-3 w-full flex items-center justify-center z-50 visible sm:invisible'>
-        <div className="flex place-items-center w-[calc(100%-5rem)] p-3 bg-custom rounded-md h-14 shadow-lg shadow-[#0e1111]">
+        <div className="flex place-items-center w-[calc(100%-1rem)] p-3 bg-custom rounded-md h-14 shadow-lg shadow-[#0e1111]">
           <button>
             <img onClick={() => setShowMenu(!showMenu)} className="h-10 w-10" src={menu}/>
           </button>
