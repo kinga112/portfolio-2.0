@@ -29,7 +29,7 @@ function Hobbies(){
             image={volunteer} 
             title="Giving back"
             description="I am blessed to be healthy and strong. Too many people have tough situations preventing them from living the life they 
-                          deserve and I beleive it is my duty to give back to the world. I learn so much from people who struggle. Listening to 
+                          deserve and I believe it is my duty to give back to the world. I learn so much from people who struggle. Listening to 
                           their stories and wisdom might help me more than anything I can do for them."
           />
           <Hobby 
@@ -40,18 +40,6 @@ function Hobbies(){
                           can infuence the world!"
             />
         </div>
-        {/* <div className='flex justify-center gap-5'>
-          <Hobby 
-            image={fl} 
-            title="Giving back"
-            description=""
-          />
-          <Hobby 
-            image={fl} 
-            title="Tech" 
-            description="I am an overall geek with technology! I love building and working with new things, gaining new experiences is very important to me."
-            />
-        </div> */}
       </div>
     </>
   )
@@ -64,13 +52,6 @@ function Hobby(props: {image: string, title: string,  description: string}){
   flex gap-5 p-5 w-full
   bg-custom w-[calc(80dvw)]] lg-w-[calc(40dvw)] h-72 rounded-xl hover:bg-custom-900 
   text-center group`
-
-  // const gcp = '/src/assets/gcp_logo.png'
-  // const docker = '/src/assets/docker_logo.png'
-  // let imageSize = 'w-24 h-24'
-  // if(props.image == gcp || props.image == docker){
-    // imageSize = 'w-16 h-12 m-2'
-  // }
 
   return(
     <>

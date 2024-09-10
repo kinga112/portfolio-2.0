@@ -25,12 +25,12 @@ function Skills(){
             skills
         </div>
         {/* <div className='flex justify-center w-full space-x-20'> */}
-        <div className='grid grid-cols-1 lg:grid-cols-2 w-full gap-5'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 w-full gap-3 sm:gap-5'>
           <div className='flex-col justify-center space-y-3 lg:pr-10'>
             <div className='flex justify-center lg:pr-[calc(10rem)] lg:justify-end text-xl'>
                 programming languages
             </div>
-            <div className='flex justify-center lg:justify-end gap-5'>
+            <div className='flex justify-center lg:justify-end gap-3 sm:gap-5'>
               <SkillGroup 
                 imgList={[python, typescript, javascript, dart]} 
                 descriptionList={['Python', 'TypeScript', 'JavaScript', 'Dart']}/>
@@ -40,7 +40,7 @@ function Skills(){
             <div className='flex lg:pl-[calc(9.5rem)] lg:justify-start justify-center text-xl'>
                 frameworks
             </div>
-            <div className='flex justify-center lg:justify-start gap-5'>
+            <div className='flex justify-center lg:justify-start gap-3 sm:gap-5'>
               <SkillGroup 
                 imgList={[react, vue, flutter]} 
                 descriptionList={['React', 'Vue', 'Flutter']}/>
@@ -50,13 +50,13 @@ function Skills(){
         <div className='flex justify-center text-xl'>
             backend / tools
         </div>
-        <div className='grid grid-row-1 lg:grid-cols-2 w-full gap-5'>
-          <div className='flex justify-center lg:justify-end gap-5'>
+        <div className='grid grid-row-1 lg:grid-cols-2 w-full gap-3 sm:gap-5'>
+          <div className='flex justify-center sm lg:justify-end gap-3 sm:gap-5'>
             <SkillGroup 
               imgList={[postgre, graphql, aws, gcp]}
               descriptionList={['PostgreSQL', 'GraphQL', 'Amazon Web Services', 'Google Cloud Platform']}/>
           </div>
-          <div className='flex justify-center lg:justify-start gap-5'>
+          <div className='flex justify-center lg:justify-start gap-3 sm:gap-5'>
             <SkillGroup 
               imgList={[k8s, docker, vercel, nginx]} 
               descriptionList={['Kubernetes', 'Docker', 'Vercel', 'Nginx']}/>
@@ -72,28 +72,25 @@ export default Skills
 function Skill(props: {image: string, description: string, index: number}){
   const ref = useRef<HTMLDivElement>(null);
   const isVisible = useIsVisible(ref);
-  // const translate = 50 * props.index
   const delay = 50 * props.index
   let scrollAnimation = `blur-sm scroll-pb-20 translate-y-10 opacity-0`
-  console.log("SCROLL ANUIMATION: " + scrollAnimation)
   if(isVisible){
     scrollAnimation = `ease-in duration-700 delay-${delay}`
-    // delay-${delay}
   }
   
   const skillStyle = `
   bg-custom hover:bg-custom-900 
   text-center h-full w-full justify-center 
-  place-items-center flex flex-col gap-3`
+  place-items-center flex flex-col gap-2 sm:gap-3 text-xs`
   
-  let imageSize = 'w-16 h-16'
+  let imageSize = 'w-10 h-10 sm:w-16 sm:h-16'
   if(props.image == gcp || props.image == docker){
-    imageSize = 'w-16 h-12 m-2'
+    imageSize = 'w-10 h-8 sm:w-16 sm:h-12 m-2'
   }
 
   return(
     <>
-      <div ref={ref} className={'w-32 h-40 rounded-xl group overflow-auto ' + scrollAnimation}>
+      <div ref={ref} className={'w-20 h-28 sm:w-32 sm:h-40 rounded-xl group overflow-auto ' + scrollAnimation}>
         <div className={skillStyle}>
           <img className={'duration-300 group-hover:scale-110 group-hover:rotate-12 rounded-md ' + imageSize} src={props.image}/>
           {props.description}

@@ -8,7 +8,7 @@ import Hobbies from "../components/Home/Hobbies"
 function Home(){
   return(
     <>
-      <div className='pt-28 h-full w-full p-10 space-y-5 overflow-hidden'>
+      <div className='pt-28 h-full w-full p-2 sm:p-10 space-y-5 overflow-hidden'>
         <div className='flex h-[500px] w-full bg-custom rounded-lg overflow-hidden justify-center place-items-center'>
           <Title/>
           <ImageGrid/>
