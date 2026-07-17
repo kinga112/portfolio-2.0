@@ -6,7 +6,6 @@ import docker from "../../assets/docker_logo.png";
 import flutter from "../../assets/flutter_logo.png";
 import gcp from "../../assets/gcp_logo.png";
 import graphql from "../../assets/graphql_logo.png";
-import javascript from "../../assets/javascript_logo.png";
 import k8s from "../../assets/kubernetes_logo.png";
 import nginx from "../../assets/nginx_logo.webp";
 import postgre from "../../assets/postgre_logo.png";

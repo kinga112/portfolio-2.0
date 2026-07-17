@@ -1,10 +1,8 @@
 import { Link } from 'react-router-dom';
 import cliqu3 from "../../assets/projects/cliqu3.png"
 import maile from "../../assets/projects/maile.png"
-import q from "../../assets/projects/q.png"
 import mbta from "../../assets/projects/mbta.png"
 import excursia from "../../assets/projects/excursia.png"
-
 
 export function Projects(){
   return(

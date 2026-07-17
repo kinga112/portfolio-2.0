@@ -14,8 +14,6 @@ import react from "../../assets/react_logo.png";
 import typescript from "../../assets/typescript_logo.png";
 import vercel from "../../assets/vercel_logo.png";
 import vue from "../../assets/vue_logo.png";
-import { useRef } from "react";
-import { useIsVisible } from "../../utils/onVisible";
 
 function Skills() {
   return (
@@ -77,14 +75,6 @@ function Skills() {
 export default Skills;
 
 function Skill(props: { image: string; description: string; index: number }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const isVisible = useIsVisible(ref);
-  const delay = 50 * props.index;
-  let scrollAnimation = `blur-sm scroll-pb-20 translate-y-10 opacity-0`;
-  if (isVisible) {
-    scrollAnimation = `ease-in duration-700 delay-${delay}`;
-  }
-
   const skillStyle = `text-custom-forest-green
   text-center h-full w-full justify-center bg-black
   place-items-center flex flex-col text-xs`;
