@@ -5,7 +5,7 @@ import broad from '../../assets/broad_logo.png'
 export function Career(){
   return(
     <>
-      <section id='career' className='flex flex-col justify-center w-full py-8 px-10 lg:py-10 lg:px-40 gap-10'>
+      <section id='career' className='flex flex-col justify-center w-full p-2 md:py-8 md:px-10 gap-10'>
         <div className='text-center font-extralight sm:text-5xl text-3xl'>
           Career
         </div>

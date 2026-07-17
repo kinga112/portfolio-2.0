@@ -23,7 +23,6 @@ function Skills() {
         <div className="flex justify-center font-extralight text-5xl pb-5">
           Skills
         </div>
-        {/* <div className='flex justify-center w-full space-x-20'> */}
         <div className="grid grid-cols-1 lg:grid-cols-2 w-full gap-3 sm:gap-5">
           <div className="flex-col justify-center space-y-3 lg:pr-10">
             <div className="flex justify-center lg:pr-[calc(10rem)] lg:justify-end text-xl">
@@ -76,22 +75,22 @@ function Skills() {
 export default Skills;
 
 function Skill(props: { image: string; description: string; index: number }) {
-  const skillStyle = `text-custom-forest-green text-sm font-semibold
-    text-center h-full w-full justify-center bg-custom-light-green
-    rounded-xl place-items-center flex flex-col gap-5`;
+  const skillStyle = `text-custom-forest-green text-xs md:text-sm font-semibold
+    text-center h-full w-full bg-custom-light-green
+    rounded-xl flex flex-col p-4 place-items-center`;
 
-  let imageSize = "w-10 h-10 sm:w-16 sm:h-16";
-  if (props.image == gcp || props.image == docker) {
-    imageSize = "w-10 h-8 sm:w-16 sm:h-12 m-2";
-  }
+  let imageSize = "flex-1 min-w-0 aspect-square object-contain md:w-16";
+  // if (props.image == gcp || props.image == docker) {
+  //   imageSize = "w-10 h-8 sm:w-16 sm:h-12 m-2";
+  // }
 
   return (
     <>
-      <div className="w-14 h-20 sm:w-32 sm:h-40 group">
+      <div className="w-20 h-28 sm:w-32 sm:h-40 group">
         <div className={skillStyle}>
           <img
             className={
-              "duration-300 group-hover:scale-110 group-hover:rotate-12 rounded-md " +
+              "md:duration-300 md:group-hover:scale-110 md:group-hover:rotate-12 rounded-md " +
               imageSize
             }
             src={props.image}

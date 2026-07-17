@@ -9,7 +9,7 @@ import excursia from "../../assets/projects/excursia.png"
 export function Projects(){
   return(
     <>
-      <section id='projects' className='flex flex-col justify-center w-full py-8 px-10 lg:py-10 lg:px-40 gap-20'>
+      <section id='projects' className='flex flex-col justify-center w-full p-2 md:py-8 md:px-10 gap-20'>
         <div className='text-center font-extralight sm:text-5xl text-3xl -mb-10'>
           Projects
         </div>
@@ -27,7 +27,7 @@ export function Projects(){
           <div className='text-3xl font-light'>
             Technical Architecture & Core Features
           </div>
-          <div className='flex flex-col px-10 gap-3'>
+          <div className='flex flex-col md:px-10 gap-3'>
             <div className='text-xl'>
               1. Cryptographic Identity & Wallet Authentication
             </div>
@@ -42,7 +42,7 @@ export function Projects(){
               order-of-magnitude cheaper gas costs than traditional EVM setups.
             </div>
           </div>
-          <div className='flex flex-col px-10 gap-3'>
+          <div className='flex flex-col md:px-10 gap-3'>
             <div className='text-xl'>
               2. End-to-End Encrypted Text Messaging
             </div>
@@ -52,7 +52,7 @@ export function Projects(){
               a peer-to-peer network, ensuring absolute user privacy and message delivery guarantees.
             </div>
           </div>
-          <div className='flex flex-col px-10 gap-3'>
+          <div className='flex flex-col md:px-10 gap-3'>
             <div className='text-xl'>
               3. High-Performance Peer-to-Peer Voice Streaming
             </div>
@@ -70,7 +70,7 @@ export function Projects(){
             The current Rust and Tauri architecture of Cliqu3 is the result of a engineering journey,
             tracing the evolution of decentralized infrastructure and cross-platform desktop frameworks.
           </div>
-          <div className='flex flex-col px-10 gap-3'>
+          <div className='flex flex-col md:px-10 gap-3'>
             <div className='text-xl'>
               Iteration 1: The Flutter Concept - Web2/Web3
             </div>
@@ -85,7 +85,7 @@ export function Projects(){
               remained centralized. This gap drove me to search for true p2p storage and sync options.
             </div>
           </div>
-          <div className='flex flex-col px-10 gap-3'>
+          <div className='flex flex-col md:px-10 gap-3'>
             <div className='text-xl'>
               Iteration 2: Electron and Decentralized Messaging
             </div>
@@ -100,7 +100,7 @@ export function Projects(){
               high CPU idle states.
             </div>
           </div>
-          <div className='flex flex-col px-10 gap-3'>
+          <div className='flex flex-col md:px-10 gap-3'>
             <div className='text-xl'>
               Iteration 3: Rust, Smart Contracts and Fully Decentralized
             </div>
@@ -130,7 +130,7 @@ export function Projects(){
           <div className='text-3xl font-light'>
             Technical Architecture & Core Features
           </div>
-          <div className='flex flex-col px-10 gap-3'>
+          <div className='flex flex-col md:px-10 gap-3'>
             <div className='text-xl'>
               1. Modern Desktop Hybrid Architecture
             </div>
@@ -144,7 +144,7 @@ export function Projects(){
               Outlook, managing access tokens securely to allow robust, passwordless protocol connections.
             </div>
           </div>
-          <div className='flex flex-col px-10 gap-3'>
+          <div className='flex flex-col md:px-10 gap-3'>
             <div className='text-xl'>
               2. Local Indexing & Caching Engine
             </div>
@@ -158,7 +158,7 @@ export function Projects(){
               protocols (imaplib and smtplib) to securely download, parse, and dispatch mail.
             </div>
           </div>
-          <div className='flex flex-col px-10 gap-3'>
+          <div className='flex flex-col md:px-10 gap-3'>
             <div className='text-xl'>
               3. Proof-of-Concept AI Assistant Server
             </div>
@@ -188,7 +188,7 @@ export function Projects(){
           <div className='text-3xl font-light'>
             Technical Architecture & Core Features
           </div>
-          <div className='flex flex-col px-10 gap-3'>
+          <div className='flex flex-col md:px-10 gap-3'>
             <div className='text-xl'>
               1. The Dynamic Routing Engine
             </div>
@@ -219,7 +219,7 @@ export function Projects(){
               or zig-zagging chaotically.
             </div>
           </div>
-          <div className='flex flex-col px-10 gap-3'>
+          <div className='flex flex-col md:px-10 gap-3'>
             <div className='text-xl'>
               2. Integration with OpenRouteService
             </div>
@@ -277,18 +277,20 @@ function Project({ name, gitlink, pic, shortDesc, longDesc, children }: ProjectP
     <>
       <div className='flex flex-col gap-5'>
         <div className="flex gap-10 place-items-center">
-          <div className='flex flex-col gap-5 justify-center'>
-            <Link to={gitlink} target='_blank' className='text-3xl hover:underline text-custom-light-green w-fit'>
-              {name}
-            </Link>
-            <div className='text-xl font-light'>
-              {shortDesc}
+          <div className='flex flex-col md:flex-row gap-5'>
+            <div className='flex flex-col gap-5 justify-center'>
+              <Link to={gitlink} target='_blank' className='text-3xl hover:underline text-custom-light-green w-fit'>
+                {name}
+              </Link>
+              <div className='text-xl font-light'>
+                {shortDesc}
+              </div>
+              <div className='text-lg'>
+                {longDesc}
+              </div>
             </div>
-            <div className='text-lg'>
-              {longDesc}
-            </div>
+            <img className="w-96 h-52 rounded" src={pic} />
           </div>
-          <img className="w-96 h-52 rounded" src={pic} />
         </div>
         {children}
       </div>
