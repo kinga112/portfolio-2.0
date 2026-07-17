@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Analytics } from '@vercel/analytics/next';
 import Home from "./pages/Home";
 import Music from "./pages/Music";
 import Mission from "./pages/Mission";
@@ -29,6 +30,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
+      <Analytics />
     </>
   );
 }
