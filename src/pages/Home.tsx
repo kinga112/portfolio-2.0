@@ -29,8 +29,9 @@ import { HashLink } from 'react-router-hash-link';
 import { GridItem } from "../components/Home/GridItem";
 
 function Home() {
-  const flexItemsCenter = 'w-full h-full md:flex place-items-center';
+  const flexItemsCenter = 'w-full h-full flex place-items-center';
   const imageStyle = 'absolute inset-0 border-4 border-transparent pointer-events-none group-hover:border-orange-400 rounded-lg';
+  const skillImageSize = 'flex-1 min-w-0 aspect-square object-contain';
 
   return (
     <>
@@ -91,25 +92,31 @@ function Home() {
           </Link>
         </GridItem>
         <GridItem row={2} column={5} bgColor="green">
-          <HashLink to="experience#projects" className={flexItemsCenter + " flex-col gap-3 justify-justify-between"}>
-            <div className="w-full max-sm:flex max-sm:flex-row max-sm:justify-evenly lg:bg-red-500 md:bg-white sm:bg-purple-500 flex">
-              <div className="md:flex font-cliqu3 text-custom-cliqu3-bg bg-custom-cliqu3-text p-3 h-20 rounded-lg place-items-center text-2xl">C&nbsp;L&nbsp;I&nbsp;Q&nbsp;U&nbsp;3</div>
-              <div className="md:flex flex-col font-serif text-white bg-black p-3 h-20 rounded-lg place-items-center text-2xl">
-                <img className="w-10 h-10 -mb-2" src={eva} />
-                <div>Mail·E</div>
-              </div>
+          <HashLink
+            to="experience#projects"
+            className="w-full h-full grid grid-cols-2 gap-3 place-items-center md:flex md:justify-evenly md:gap-3"
+          >
+            <div className="flex place-items-center justify-center w-full h-full aspect-square md:aspect-auto font-cliqu3 text-custom-cliqu3-bg bg-custom-cliqu3-text p-3 md:h-20 rounded-lg text-lg md:text-2xl">
+              C&nbsp;L&nbsp;I&nbsp;Q&nbsp;U&nbsp;3
             </div>
-            <div className="w-full max-sm:flex max-sm:flex-row max-sm:justify-evenly lg:bg-green-500 md:bg-white sm:bg-purple-500 flex justify-evenly">
-              <div className="sm:row-span-1 sm:col-span-2 md:flex text-custom-excuria-text bg-custom-excuria-bg p-3 h-20 rounded-lg place-items-center text-2xl">Excursia</div>
-              <div className="sm:row-span-2 sm:col-span-2 md:flex p-3 h-20 rounded-lg place-items-center bg-white">
-                <img className="w-16 h-16" src={mbta} />
-                <img className="w-20 h-16" src={googleAssistant} />
-                </div>
+
+            <div className="flex flex-col place-items-center justify-center w-full h-full aspect-square md:aspect-auto font-serif text-white bg-black p-3 md:h-20 rounded-lg text-lg md:text-2xl">
+              <img className="w-8 h-8 md:w-10 md:h-10 -mb-2" src={eva} />
+              <div>Mail·E</div>
+            </div>
+
+            <div className="flex place-items-center justify-center w-full h-full aspect-square md:aspect-auto text-custom-excuria-text bg-custom-excuria-bg p-3 md:h-20 rounded-lg text-lg md:text-2xl">
+              Excursia
+            </div>
+
+            <div className="flex place-items-center justify-center w-full h-full aspect-square md:aspect-auto p-3 md:h-20 rounded-lg bg-white">
+              <img className="w-1/3 h-auto object-contain" src={mbta} />
+              <img className="w-2/5 h-auto object-contain" src={googleAssistant} />
             </div>
           </HashLink>
         </GridItem>
         <GridItem row={5} column={2} bgColor="green">
-          <HashLink to="experience#career" className={flexItemsCenter + " flex-col justify-around p-5"}>
+          <HashLink to="experience#career" className={flexItemsCenter + " flex-col justify-evenly gap-5 p-5"}>
             <img className="h-28 w-fit object-cover rounded-xl" src={gvi} />
             <img src={casa} />
             <img src={broad} />
@@ -117,34 +124,30 @@ function Home() {
         </GridItem>
         <GridItem row={5} column={5} bgColor="beige">
           <HashLink to="experience#skills" className={flexItemsCenter + " flex-col gap-5 justify-center p-5"}>
-            <div className="w-full h-full flex flex-col justify-around">
-              <div className="flex justify-between">
-                <div className="flex gap-5">
-                  <img className="h-20 w-20" src={python} />
-                  <img className="h-20 w-20" src={typescript} />
-                  <img className="h-20 w-20" src={rust} />
-                  <img className="h-20 w-20" src={dart} />
-                </div>
-                <div className="flex gap-5">
-                  <img className="h-20 w-20" src={react} />
-                  <img className="h-20 w-20" src={vue} />
-                  <img className="h-20 w-20" src={flutter} />
-                </div>
+            <div className="w-full h-full flex flex-col justify-around gap-4">
+              <div className="flex justify-between gap-3 w-full">
+                <img className={skillImageSize} src={python} />
+                <img className={skillImageSize} src={typescript} />
+                <img className={skillImageSize} src={rust} />
+                <img className={skillImageSize} src={dart} />
+                <img className={skillImageSize} src={react} />
+                <img className={skillImageSize} src={vue} />
+                <img className={skillImageSize} src={flutter} />
               </div>
-              <div className="flex justify-between place-items-center">
-                <img className="h-20 w-20" src={postgre} />
-                <img className="h-20 w-20" src={graphql} />
-                <img className="h-20 w-20" src={aws} />
-                <img className="h-16 w-20" src={gcp} />
-                <img className="h-20 w-20" src={k8s} />
-                <img className="h-16 w-20" src={docker} />
+              <div className="flex justify-between items-center gap-3 w-full">
+                <img className={skillImageSize} src={postgre} />
+                <img className={skillImageSize} src={graphql} />
+                <img className={skillImageSize} src={aws} />
+                <img className={skillImageSize} src={gcp} />
+                <img className={skillImageSize} src={k8s} />
+                <img className={skillImageSize} src={docker} />
               </div>
             </div>
           </HashLink>
         </GridItem>
         <GridItem row={5} column={3}>
           <div className="w-full h-full overflow-hidden relative inline-block group">
-            <img className="object-cover block w-full h-full" src={volcanoTree} />
+            <img className="object-cover block w-full md:h-full h-60" src={volcanoTree} />
             <div className={imageStyle}></div>
           </div>
         </GridItem>
