@@ -10,9 +10,9 @@ function Mission(){
         <div className='flex justify-center text-7xl font-light'>
           My Mission
         </div>
-        <div className='flex flow-row text-2xl px-10 justify-around gap-10'>
-          <img className='rounded-2xl' src={houseKids} height={450} width={500}/>
-          <div className='p-14 bg-custom-light-green rounded-2xl'>
+        <div className='flex flex-col gap-5 md:flex-row items-center justify-around'>
+          <img className='rounded-2xl w-full md:w-1/2' src={houseKids} height={450} width={500}/>
+          <div className='p-14 bg-custom-light-green rounded-2xl flex flex-col gap-3 w-full md:w-1/2'>
             I am deeply committed to dedicating my time to helping others and making a positive impact on their lives.
             Inspired by my experiences volunteering on mission trips in Costa Rica and at a local soup kitchen,
             I believe in the transformative power of service. Through my work, I aim to contribute meaningfully to communities,
@@ -20,19 +20,19 @@ function Mission(){
             importance of compassion and action in building a better world.
           </div>
         </div>
-        <div className='flex flow-row text-2xl px-10 justify-around gap-10'>
-          <div className='p-14 bg-custom-light-green rounded-2xl'>
+        <div className='flex flex-col gap-5 md:flex-row items-center justify-around'>
+          <div className='p-14 bg-custom-light-green rounded-2xl flex flex-col gap-3 w-full md:w-1/2'>
             I am deeply committed to dedicating my time to helping others and making a positive impact on their lives.
             Inspired by my experiences volunteering on mission trips in Costa Rica and at a local soup kitchen,
             I believe in the transformative power of service. Through my work, I aim to contribute meaningfully to communities,
             fostering empathy, and creating lasting change. Each endeavor I undertake is driven by a profound belief in the
             importance of compassion and action in building a better world.
           </div>
-          <img className='rounded-2xl' src={working} height={500} width={500}/>
+          <img className='rounded-2xl w-full md:w-1/2' src={working} height={500} width={500}/>
         </div>
-        <div className='flex flow-row text-2xl px-10 justify-around gap-10'>
-          <img className='rounded-2xl' src={losGuitosKids} height={500} width={500}/>
-          <div className='p-14 bg-custom-light-green rounded-2xl'>
+        <div className='flex flex-col gap-5 md:flex-row items-center justify-around'>
+          <img className='rounded-2xl w-full md:w-1/2' src={losGuitosKids} height={500} width={500}/>
+          <div className='p-14 bg-custom-light-green rounded-2xl flex flex-col gap-3 w-full md:w-1/2'>
             I am deeply committed to dedicating my time to helping others and making a positive impact on their lives.
             Inspired by my experiences volunteering on mission trips in Costa Rica and at a local soup kitchen,
             I believe in the transformative power of service. Through my work, I aim to contribute meaningfully to communities,
@@ -40,15 +40,15 @@ function Mission(){
             importance of compassion and action in building a better world.
           </div>
         </div>
-        <div className='flex flow-row text-2xl px-10 justify-around gap-10'>
-          <div className='p-14 bg-custom-light-green rounded-2xl'>
+        <div className='flex flex-col gap-5 md:flex-row items-center justify-around'>
+          <div className='p-14 bg-custom-light-green rounded-2xl flex flex-col gap-3 w-full md:w-1/2'>
             I am deeply committed to dedicating my time to helping others and making a positive impact on their lives.
             Inspired by my experiences volunteering on mission trips in Costa Rica and at a local soup kitchen,
             I believe in the transformative power of service. Through my work, I aim to contribute meaningfully to communities,
             fostering empathy, and creating lasting change. Each endeavor I undertake is driven by a profound belief in the
             importance of compassion and action in building a better world.
           </div>
-          <img className='rounded-2xl' src={kid} height={350} width={350}/>
+          <img className='rounded-2xl w-full md:w-1/2' src={kid} height={350} width={350}/>
         </div>
       </div>
     </>
