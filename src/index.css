@@ -5,6 +5,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Neuropol';
+  src: url('./assets/fonts/neuropol-x-free.rg-regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @layer utilities {
   .pause {
     animation-play-state: paused;
@@ -29,7 +36,7 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   /* background-color: #15253f; */
-  background-color: #0E1D35;
+  /*background-color: #0E1D35;*/
   /* background-color: #242424; */
 
   font-synthesis: none;
