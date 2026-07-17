@@ -12,100 +12,80 @@ import grogu from '../assets/image-grid/grogu.jpg'
 function Travel(){
   return(
     <>
-      <div className='pt-28 h-full w-full p-10 space-y-10'>
+      {/*<div className='pt-28 h-full w-full p-10 space-y-10 bg-custom-forest-green'>*/}
+      <div className='pt-28 h-screen w-screen p-10 space-y-10 bg-custom-forest-green'>
         <div className='flex justify-center text-5xl font-extralight'>
           Travel
         </div>
-        <div>
-          <VerticalTimeline>
-          <VerticalTimelineElement
-              className="vertical-timeline-element--work"
-              contentStyle={{ background: '#9575A1', color: '#0A121F' }}
-              contentArrowStyle={{ borderRight: '7px solid  #9575A1' }}
-              date="July 13-18, 2024"
-              iconStyle={{ background: '#9575A1', color: '#fff' }}
-            >
-              <div className="flex">
-                <div>
-                  <h3 className="vertical-timeline-element-title">Copa Champs!</h3>
-                  <h4 className="vertical-timeline-element-subtitle">Buenos Aires, Argentina</h4>
-                  <p>
-                    Creative Direction, User Experience, Visual Design, Project Management, Team Leading
-                  </p>
-                </div>
-                <div className="flex pb-10 w-full justify-center">
-                  <div className="w-36 h-36">
-                    <PictureCarousel/>
-                  </div>
-                </div>
-              </div>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-              className="vertical-timeline-element--work"
-              contentStyle={{ background: '#9575A1', color: '#0A121F' }}
-              contentArrowStyle={{ borderRight: '7px solid  #9575A1' }}
-              date="July 12-13 2024"
-              iconStyle={{ background: '#9575A1', color: '#fff' }}
-              // icon={<WorkIcon />}
-            >
-              <h3 className="vertical-timeline-element-title">El Calafate, Argentina</h3>
-              {/* <h4 className="vertical-timeline-element-subtitle">El Calafate, Argentina</h4> */}
-              <p>
-                Traveling down the famous Ruta 40 (Route 40), seeing Guanaco's, Vultures and Cows roaming the fields 
-                heading towards the Glacier. Glaciers are really that blue!
-              </p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-              className="vertical-timeline-element--work"
-              contentStyle={{ background: '#9575A1', color: '#0A121F' }}
-              contentArrowStyle={{ borderRight: '7px solid  #9575A1' }}
-              date="July 7-11, 2024"
-              iconStyle={{ background: '#9575A1', color: '#fff' }}
-              // icon={<WorkIcon />}
-            >
-              <h3 className="vertical-timeline-element-title">Ushuaia, Argentina</h3>
-              <h4 className="vertical-timeline-element-subtitle">Fin del Mundo: The end of the world</h4>
-              <p>
-                Snow Snow Snow and Hot Cocoa! Snow mobiling and snow shoeing in the mountains. 
-                Building snow mans, and throwing snow balls. Ushuaia is beautiful, the most Southern City in the world.
-              </p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-              className="vertical-timeline-element--work"
-              contentStyle={{ background: '#9575A1', color: '#0A121F' }}
-              contentArrowStyle={{ borderRight: '7px solid  #9575A1' }}
-              date="July"
-              iconStyle={{ background: '#9575A1', color: '#fff' }}
-              // icon={<WorkIcon />}
-            >
-              <h3 className="vertical-timeline-element-title">Creative Director</h3>
-              <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-              <p>
-                Creative Direction, User Experience, Visual Design, Project Management, Team Leading
-              </p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-              className="vertical-timeline-element--work"
-              contentStyle={{ background: '#9575A1', color: '#0A121F' }}
-              contentArrowStyle={{ borderRight: '7px solid  #9575A1' }}
-              date="July"
-              iconStyle={{ background: '#9575A1', color: '#fff' }}
-              // icon={<WorkIcon />}
-            >
-              <h3 className="vertical-timeline-element-title">Creative Director</h3>
-              <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-              <p>
-                Creative Direction, User Experience, Visual Design, Project Management, Team Leading
-              </p>
-            </VerticalTimelineElement>
-          </VerticalTimeline>
+        <div className="3xl">
+          PAGE COMING SOON!
         </div>
+        <div>
+          Aiming to share my travel experiences and encounters from around the world!
+        </div>
+        {/*<div>
+          Some travel pics and what not...
+        </div>
+        <TravelLocation location="New York" date="June 2026">
+          <div>
+            LEGO LAND!
+          </div>
+        </TravelLocation>
+        <TravelLocation location="Costa Rica" date="April 2026">
+          <div>
+            DINO LAND!
+          </div>
+        </TravelLocation>
+        <TravelLocation location="Argentina" date="July 2024">
+          <div>
+            ARGENTINAAAAAA
+          </div>
+        </TravelLocation>
+        <TravelLocation location="Costa Rica" date="March 2023">
+          <div>
+            2nd time to Roblealto
+          </div>
+        </TravelLocation>
+        <TravelLocation location="Costa Rica" date="November 2022">
+          <div>
+            Nicolitaaaaa
+          </div>
+        </TravelLocation>
+        <TravelLocation location="Costa Rica" date="March 2022">
+          <div>
+            1st time to Roblealto
+          </div>
+        </TravelLocation>*/}
       </div>
     </>
   )
 }
 
 export default Travel
+
+interface TravelLocationProps {
+  location: string;
+  date: string;
+  children?: React.ReactNode;
+}
+
+function TravelLocation({location, date, children}: TravelLocationProps) {
+  return (
+    <>
+      <div className="flex flex-col gap-3">
+        <div className="flex gap-5 place-items-center">
+          <div className="text-3xl font-light">
+            {location}
+          </div>
+          <div className="text-sm">
+            {date}
+          </div>
+        </div>
+        {children}
+      </div>
+    </>
+  )
+}
 
 function PictureCarousel(){
   // props: {images: Array<string>}
@@ -114,8 +94,8 @@ function PictureCarousel(){
   // }));
   return(
     <>
-        <Carousel 
-          // showArrows={true} 
+        <Carousel
+          // showArrows={true}
           infiniteLoop
           autoPlay={true}
           width={150}
